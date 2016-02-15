@@ -30,7 +30,25 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func onSignoutButtonClick(sender: UIButton) {
-        performSegueWithIdentifier("loginSegue", sender: nil)
+        let alertController = UIAlertController(
+            title: "",
+            message: "Are you sure you want to sign out?",
+            preferredStyle: .ActionSheet)
+        let logoutAction = UIAlertAction(title: "Sign Out", style: .Destructive) { (action) in
+            // handle case of user logging out
+            self.performSegueWithIdentifier("loginSegue", sender: nil)
+            
+        }
+        // add the logout action to the alert controller
+        alertController.addAction(logoutAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            // handle case of user canceling. Doing nothing will dismiss the view.
+        }
+        // add the cancel action to the alert controller
+        alertController.addAction(cancelAction)
+        
+        presentViewController(alertController, animated: true) {}
     }
     
     /*
