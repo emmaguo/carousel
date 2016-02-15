@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="K19-9r-fQB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Yla-AL-YHt">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -37,10 +37,6 @@
                                         <rect key="frame" x="46" y="902" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="dpx-3M-d6h">
-                                        <rect key="frame" x="123" y="903" width="76" height="75"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile6" id="eJR-Yn-QRg">
                                         <rect key="frame" x="201" y="903" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -52,6 +48,10 @@
                                             <segue destination="HlH-vy-ufm" kind="push" id="rhq-xq-2Oz"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="dpx-3M-d6h">
+                                        <rect key="frame" x="123" y="903" width="76" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -63,6 +63,12 @@
                     <connections>
                         <outlet property="introImageView" destination="ZKR-oj-bmQ" id="3Ca-rn-LO4"/>
                         <outlet property="scrollView" destination="rfh-bF-RVP" id="3jf-c7-yEJ"/>
+                        <outlet property="tile1View" destination="H2P-ZO-NGZ" id="tWh-Sr-igD"/>
+                        <outlet property="tile2View" destination="uSt-uY-2IA" id="xn4-Rn-28C"/>
+                        <outlet property="tile3View" destination="hCf-bW-sEZ" id="vU2-iZ-GfR"/>
+                        <outlet property="tile4View" destination="dLx-Lj-gFv" id="F1n-jk-EPY"/>
+                        <outlet property="tile5View" destination="dpx-3M-d6h" id="guY-MZ-mMK"/>
+                        <outlet property="tile6View" destination="eJR-Yn-QRg" id="plq-6J-aum"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBx-WR-o1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -74,9 +80,13 @@
             <objects>
                 <viewController id="HlH-vy-ufm" customClass="LoginViewController" customModule="carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aWR-VM-Nus">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sign_in_nav_bar" id="YGP-3I-gDN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iTf-0f-scu">
                                 <rect key="frame" x="5" y="27" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -136,14 +146,11 @@
                                     </view>
                                 </subviews>
                             </scrollView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sign_in_nav_bar" id="YGP-3I-gDN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="MXD-rq-yyF"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="buttonParentView" destination="u7a-vJ-XDs" id="MX9-zW-0dh"/>
                         <outlet property="emailField" destination="YrM-Bv-S2v" id="y5j-EB-E7z"/>
