@@ -12,6 +12,8 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var buttonParentView: UIView!
+    @IBOutlet weak var fieldParentView: UIView!
+    @IBOutlet weak var navbarView: UIImageView!
     @IBOutlet weak var signinButton: UIButton!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -47,6 +49,31 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // Set initial transform values 20% of original size
+        let transform = CGAffineTransformMakeScale(0.2, 0.2)
+        // Apply the transform properties of the views
+        navbarView.transform = transform
+        fieldParentView.transform = transform
+        // Set the alpha properties of the views to transparent
+        navbarView.alpha = 0
+        fieldParentView.alpha = 0
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        //Animate the code within over 0.3 seconds...
+        UIView.animateWithDuration(0.3) { () -> Void in
+            // Return the views transform properties to their default states.
+            self.fieldParentView.transform = CGAffineTransformIdentity
+            self.navbarView.transform = CGAffineTransformIdentity
+            // Set the alpha properties of the views to fully opaque
+            self.fieldParentView.alpha = 1
+            self.navbarView.alpha = 1
+        }
+    }
+    
     func keyboardWillShow(notification: NSNotification!) {
         // Move the button up above keyboard
         buttonParentView.frame.origin.y = buttonInitialY + buttonOffset
@@ -60,7 +87,10 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        // This method is called as the user scrolls
+        if scrollView.contentOffset.y <= -50 {
+            // Hide the keyboard
+            view.endEditing(true)
+        }
     }
     
     func presentAlert(title: String, message: String) {
@@ -98,6 +128,10 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         }
     }
 
+    @IBAction func onBackButtonClick(sender: UIButton) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
     /*
     // MARK: - Navigation
 

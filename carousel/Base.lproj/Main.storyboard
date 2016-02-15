@@ -45,7 +45,7 @@
                                         <rect key="frame" x="21" y="1066" width="281" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="HlH-vy-ufm" kind="push" id="rhq-xq-2Oz"/>
+                                            <segue destination="HlH-vy-ufm" kind="push" animates="NO" id="rhq-xq-2Oz"/>
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="dpx-3M-d6h">
@@ -90,6 +90,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iTf-0f-scu">
                                 <rect key="frame" x="5" y="27" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onBackButtonClick:" destination="HlH-vy-ufm" eventType="touchUpInside" id="ecb-Aa-32m"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="vHA-bm-sc7">
                                 <rect key="frame" x="0.0" y="74" width="320" height="494"/>
@@ -154,6 +157,8 @@
                     <connections>
                         <outlet property="buttonParentView" destination="u7a-vJ-XDs" id="MX9-zW-0dh"/>
                         <outlet property="emailField" destination="YrM-Bv-S2v" id="y5j-EB-E7z"/>
+                        <outlet property="fieldParentView" destination="sZd-mP-3Kl" id="MM4-Qd-Bpc"/>
+                        <outlet property="navbarView" destination="YGP-3I-gDN" id="lNh-j5-AcW"/>
                         <outlet property="passwordField" destination="ahW-aV-iCp" id="Yhq-7i-FNe"/>
                         <outlet property="scrollView" destination="vHA-bm-sc7" id="5hJ-Ne-IdO"/>
                         <outlet property="signinButton" destination="YAc-fL-ClA" id="PaE-rB-WQG"/>
