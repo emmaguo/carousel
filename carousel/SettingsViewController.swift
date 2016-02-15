@@ -10,10 +10,14 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var settingsImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        scrollView.contentSize = settingsImageView.image!.size
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +25,14 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onCloseButtonClick(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
+    @IBAction func onSignoutButtonClick(sender: UIButton) {
+        performSegueWithIdentifier("loginSegue", sender: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
