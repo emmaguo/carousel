@@ -15,6 +15,9 @@
 		7E2360651C705EB500A6E395 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2360641C705EB500A6E395 /* Common.swift */; };
 		7E2360671C7062D300A6E395 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2360661C7062D300A6E395 /* IntroViewController.swift */; };
 		7E243E181C714982000CE1BC /* TutorialViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E243E171C714982000CE1BC /* TutorialViewcontroller.swift */; };
+		7E3147D51C715DC200B0FF81 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3147D41C715DC200B0FF81 /* TimeLineViewController.swift */; };
+		7E3147D71C71608700B0FF81 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3147D61C71608700B0FF81 /* ConversationsViewController.swift */; };
+		7E3147D91C7160B000B0FF81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3147D81C7160B000B0FF81 /* SettingsViewController.swift */; };
 		7E6F8D681C70FB2F007AF549 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F8D671C70FB2F007AF549 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		7E2360641C705EB500A6E395 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7E2360661C7062D300A6E395 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		7E243E171C714982000CE1BC /* TutorialViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewcontroller.swift; sourceTree = "<group>"; };
+		7E3147D41C715DC200B0FF81 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		7E3147D61C71608700B0FF81 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		7E3147D81C7160B000B0FF81 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7E6F8D671C70FB2F007AF549 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +72,9 @@
 				7E2360521C705D2C00A6E395 /* AppDelegate.swift */,
 				7E2360541C705D2C00A6E395 /* ViewController.swift */,
 				7E2360561C705D2C00A6E395 /* Main.storyboard */,
+				7E3147D81C7160B000B0FF81 /* SettingsViewController.swift */,
+				7E3147D61C71608700B0FF81 /* ConversationsViewController.swift */,
+				7E3147D41C715DC200B0FF81 /* TimeLineViewController.swift */,
 				7E243E171C714982000CE1BC /* TutorialViewcontroller.swift */,
 				7E6F8D671C70FB2F007AF549 /* LoginViewController.swift */,
 				7E2360661C7062D300A6E395 /* IntroViewController.swift */,
@@ -150,10 +159,13 @@
 			files = (
 				7E2360551C705D2C00A6E395 /* ViewController.swift in Sources */,
 				7E2360651C705EB500A6E395 /* Common.swift in Sources */,
+				7E3147D51C715DC200B0FF81 /* TimeLineViewController.swift in Sources */,
+				7E3147D71C71608700B0FF81 /* ConversationsViewController.swift in Sources */,
 				7E2360531C705D2C00A6E395 /* AppDelegate.swift in Sources */,
 				7E6F8D681C70FB2F007AF549 /* LoginViewController.swift in Sources */,
 				7E243E181C714982000CE1BC /* TutorialViewcontroller.swift in Sources */,
 				7E2360671C7062D300A6E395 /* IntroViewController.swift in Sources */,
+				7E3147D91C7160B000B0FF81 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
