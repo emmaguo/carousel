@@ -107,7 +107,7 @@
                                                 <rect key="frame" x="22" y="154" width="276" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -123,9 +123,12 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YAc-fL-ClA">
                                                 <rect key="frame" x="20" y="27" width="281" height="46"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="didPressSignin:" destination="HlH-vy-ufm" eventType="touchUpInside" id="ILr-I0-FHU"/>
+                                                </connections>
                                             </button>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="QCd-wt-1kv">
-                                                <rect key="frame" x="150" y="40" width="20" height="20"/>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" id="QCd-wt-1kv">
+                                                <rect key="frame" x="244" y="40" width="20" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </activityIndicatorView>
                                         </subviews>
@@ -143,12 +146,31 @@
                     <navigationItem key="navigationItem" id="MXD-rq-yyF"/>
                     <connections>
                         <outlet property="buttonParentView" destination="u7a-vJ-XDs" id="MX9-zW-0dh"/>
+                        <outlet property="emailField" destination="YrM-Bv-S2v" id="y5j-EB-E7z"/>
+                        <outlet property="passwordField" destination="ahW-aV-iCp" id="Yhq-7i-FNe"/>
                         <outlet property="scrollView" destination="vHA-bm-sc7" id="5hJ-Ne-IdO"/>
+                        <outlet property="signinButton" destination="YAc-fL-ClA" id="PaE-rB-WQG"/>
+                        <outlet property="signinIndicator" destination="QCd-wt-1kv" id="uRc-A5-2Iw"/>
+                        <segue destination="vDB-Wn-ByF" kind="modal" identifier="tutorialSegue" id="LPQ-1n-tPo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqZ-9n-4zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1950" y="347"/>
+        </scene>
+        <!--Tutorial Viewcontroller-->
+        <scene sceneID="clD-Vo-XIx">
+            <objects>
+                <viewController id="vDB-Wn-ByF" customClass="TutorialViewcontroller" customModule="carousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8uc-dN-hss">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJE-hJ-Cc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="347"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="acu-Xw-HhV">

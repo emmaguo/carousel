@@ -14,6 +14,7 @@
 		7E23605D1C705D2C00A6E395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E23605B1C705D2C00A6E395 /* LaunchScreen.storyboard */; };
 		7E2360651C705EB500A6E395 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2360641C705EB500A6E395 /* Common.swift */; };
 		7E2360671C7062D300A6E395 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2360661C7062D300A6E395 /* IntroViewController.swift */; };
+		7E243E181C714982000CE1BC /* TutorialViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E243E171C714982000CE1BC /* TutorialViewcontroller.swift */; };
 		7E6F8D681C70FB2F007AF549 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F8D671C70FB2F007AF549 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		7E23605E1C705D2C00A6E395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E2360641C705EB500A6E395 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7E2360661C7062D300A6E395 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		7E243E171C714982000CE1BC /* TutorialViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewcontroller.swift; sourceTree = "<group>"; };
 		7E6F8D671C70FB2F007AF549 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 				7E2360521C705D2C00A6E395 /* AppDelegate.swift */,
 				7E2360541C705D2C00A6E395 /* ViewController.swift */,
 				7E2360561C705D2C00A6E395 /* Main.storyboard */,
+				7E243E171C714982000CE1BC /* TutorialViewcontroller.swift */,
 				7E6F8D671C70FB2F007AF549 /* LoginViewController.swift */,
 				7E2360661C7062D300A6E395 /* IntroViewController.swift */,
 				7E2360591C705D2C00A6E395 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				7E2360651C705EB500A6E395 /* Common.swift in Sources */,
 				7E2360531C705D2C00A6E395 /* AppDelegate.swift in Sources */,
 				7E6F8D681C70FB2F007AF549 /* LoginViewController.swift in Sources */,
+				7E243E181C714982000CE1BC /* TutorialViewcontroller.swift in Sources */,
 				7E2360671C7062D300A6E395 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

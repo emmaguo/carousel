@@ -12,6 +12,10 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var buttonParentView: UIView!
+    @IBOutlet weak var signinButton: UIButton!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signinIndicator: UIActivityIndicatorView!
     
     var buttonInitialY: CGFloat!
     var buttonOffset: CGFloat!
@@ -26,8 +30,16 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         buttonInitialY = buttonParentView.frame.origin.y
         buttonOffset = -140
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "keyboardWillShow:",
+            name: UIKeyboardWillShowNotification,
+            object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "keyboardWillHide:",
+            name: UIKeyboardWillHideNotification,
+            object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +63,40 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         // This method is called as the user scrolls
     }
     
+    func presentAlert(title: String, message: String) {
+        let alertController = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+        }
+        alertController.addAction(OKAction)
+        presentViewController(alertController, animated: true) {}
+    }
+    
+    @IBAction func didPressSignin(sender: UIButton) {
+        if emailField.text!.isEmpty {
+            presentAlert(
+                "Email Required",
+                message: "Please enter your email address")
+        } else if passwordField.text!.isEmpty{
+            presentAlert(
+                "Password Required",
+                message: "Please enter your password")
+        } else {
+            signinIndicator.startAnimating()
+            delay(2, closure: { () -> () in
+                self.signinIndicator.stopAnimating()
+                if self.emailField.text == "emma" && self.passwordField.text == "123" {
+                    self.performSegueWithIdentifier("tutorialSegue", sender: nil)
+                } else {
+                    self.presentAlert(
+                        "Sign In Failed",
+                        message: "Incorret email or password.")
+                }
+            })
+        }
+    }
 
     /*
     // MARK: - Navigation
